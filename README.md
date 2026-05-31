@@ -182,3 +182,21 @@ To initiate the fully autonomous real-time voice experience, start both the secu
 3. Click the **🎙️** button and speak naturally:
    > *"Hi Bipin, check if my calendar is free tomorrow, and if I have time in the afternoon, please book a SvaraVoice demo!"*
 4. View the scrolling console logs and interactive tool cards in real-time as Gemini checks slots, determines availability, and pushes the booking to your Google Calendar!
+
+---
+
+## 📸 Production Evidence of Successful Operation
+
+Here is the visual proof showing **SvaraVoice AI** successfully executing real-time voice conversations, handling calendar checking, and booking real events directly on Google Calendar:
+
+### 1. Active **SvaraVoice AI** Live Interface
+Shows the premium Sanskrit-themed glowing soundwave logo, subtitle, and an active voice session where the user said *"Thank you."* and Gemini successfully processed a calendar booking:
+![SvaraVoice AI Active Chat Interface](images/svaravoice_live_interface.png)
+
+### 2. Google Calendar Successful Booking Proof
+Shows the active events inserted into Google Calendar in real-time by the Gemini AI Calling Assistant:
+![Google Calendar Booked Events Proof](images/google_calendar_booking.png)
+
+### 3. Previous Interface State (Pre-Branding Refresh)
+![Old Disconnected UI](images/old_ui_disconnected.png)
+
