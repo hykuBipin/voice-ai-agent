@@ -72,7 +72,7 @@ def book_meeting(date_time_iso: str, name: str = "User") -> str:
         calendar_id = os.getenv("HOST_CALENDAR_ID", "primary")
 
         event = {
-            'summary': f'AstraVoice Demo: {name}',
+            'summary': f'SvaraVoice Demo: {name}',
             'description': 'Automated booking created via Gemini Live AI Calling Assistant.',
             'start': {'dateTime': start_time.isoformat()},
             'end': {'dateTime': end_time.isoformat()},

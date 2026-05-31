@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstraVoice - AI Assistant</title>
+    <title>SvaraVoice - AI Assistant</title>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -207,7 +207,7 @@
 <body>
 
     <div id="setupModal" class="setup-modal">
-        <h2>Welcome to AstraVoice</h2>
+        <h2>Welcome to SvaraVoice</h2>
         <input type="password" id="apiKey" class="api-input" placeholder="Enter Gemini API Key (AIza...)">
         <button id="startSessionBtn" class="btn-start">Connect to Agent</button>
     </div>
@@ -272,7 +272,7 @@
                 // 🧠 CONTEXT INJECTION: Give Gemini the exact date and timezone
                 const currentDate = new Date().toString();
                 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                const systemPrompt = `You are a professional, helpful booking assistant. 
+                const systemPrompt = `You are Bipin, a professional, helpful booking assistant. 
                 CRITICAL CONTEXT: The current date and time is ${currentDate}. The user is in the ${timeZone} timezone. 
                 Always check availability first before booking a meeting to prevent double-booking. When booking or checking, format dates strictly to ISO 8601 offset to the user's timezone.`;
 
