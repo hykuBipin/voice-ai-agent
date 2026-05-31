@@ -201,6 +201,56 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo-svg {
+            margin-bottom: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-svg:hover {
+            transform: scale(1.08);
+        }
+
+        .brand-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+        }
+
+        .brand-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0.25rem 0 0 0;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes wave {
+            0% { stroke-dashoffset: 60; }
+            100% { stroke-dashoffset: -60; }
+        }
     </style>
 </head>
 
@@ -215,6 +265,29 @@
     <div class="status-badge" id="statusBadge">
         <div class="dot" id="statusDot"></div>
         <span id="statusText">Disconnected</span>
+    </div>
+
+    <!-- 🎙️ SvaraVoice Elegant Sanskrit AI Branding Header -->
+    <div class="header-container">
+        <svg class="logo-svg" width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#60a5fa" />
+                    <stop offset="50%" stop-color="#c084fc" />
+                    <stop offset="100%" stop-color="#f472b6" />
+                </linearGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <!-- Sanskrit Soundwave Visual Representation -->
+            <circle cx="50" cy="50" r="42" stroke="url(#logo-grad)" stroke-width="2" stroke-dasharray="12 8 6 8" style="filter: url(#glow); transform-origin: center; animation: spin 24s linear infinite;" />
+            <circle cx="50" cy="50" r="34" stroke="url(#logo-grad)" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4 4" style="transform-origin: center; animation: spin 16s linear infinite reverse;" />
+            <path d="M32 50 C 40 25, 44 75, 50 50 C 56 25, 60 75, 68 50" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round" style="filter: url(#glow); stroke-dasharray: 60; stroke-dashoffset: 0; animation: wave 4s ease-in-out infinite alternate;" />
+        </svg>
+        <h1 class="brand-title">SvaraVoice AI</h1>
+        <p class="brand-subtitle">Gemini Live Voice Assistant</p>
     </div>
 
     <div class="orb-container" id="orbContainer">
